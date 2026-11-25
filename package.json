@@ -1,0 +1,28 @@
+{
+  "name": "codesync",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Real-time collaborative coding platform with Admin-controlled editing, Monaco + Yjs and sandboxed code execution",
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "dev": "node server.mjs --dev",
+    "build": "next build",
+    "start": "node server.mjs",
+    "test": "node --test \"tests/unit/*.test.mjs\"",
+    "test:integration": "node --test \"tests/integration/*.test.mjs\"",
+    "postinstall": "node scripts/copy-monaco.mjs"
+  },
+  "dependencies": {
+    "@monaco-editor/react": "^4.7.0",
+    "lib0": "^0.2.99",
+    "monaco-editor": "^0.52.0",
+    "next": "^15.1.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "ws": "^8.18.0",
+    "y-protocols": "^1.0.6",
+    "yjs": "^13.6.20"
+  }
+}
